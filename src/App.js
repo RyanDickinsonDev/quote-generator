@@ -1,25 +1,47 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import './index.css';
+import Quotes from './data/quotes';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      quote: { body: "No Quotes", author: null }
+    };
+  }
+
+  componentDidMount() {
+    this.setRandomQuote();
+  }
+
+  setRandomQuote = () => {
+    const randomIndex = Math.floor(Math.random() * Quotes.length);
+    this.setState({ quote: Quotes[randomIndex] });
+  };
+
+  handleClick = () => {
+    this.setRandomQuote();
+  };
+
+  render() {
+    const { quote } = this.state;
+
+    return (
+      <div className="wrapper">
+        <div id="quote-box">
+          <div id="quote-body">
+            <p id="text">{quote.body}</p>
+            <p id="author">{quote.author}</p>
+          </div>
+          <div id="quote-footer">
+            <button id="new-quote" onClick={this.handleClick}>
+              Generate Quote
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
 }
 
 export default App;
