@@ -34,6 +34,7 @@ class App extends Component {
             <p id="author">{quote.author}</p>
           </div>
           <div id="quote-footer">
+           <a href="https://twitter.com/intent/tweet" target="_blank" id="tweet-quote" rel="noreferrer">Tweet Quote</a>
             <button id="new-quote" onClick={this.handleClick}>
               Generate Quote
             </button>
