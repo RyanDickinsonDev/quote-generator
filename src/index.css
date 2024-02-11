@@ -24,9 +24,9 @@ body {
 }
 
 .wrapper #quote-body p {
-  padding: 20px;
-  margin: 20px;
-  font-size: 20px;
+  padding: 16px;
+  margin: 16px;
+  font-size: 16px;
   font-weight: bold;
   text-align: center;
 }
