@@ -1,55 +1,49 @@
-*{
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
-body{
-    background-color: crimson;
-}
+body {
+  background-color: crimson;
+} 
 
-.wrapper{
+.wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
     height: 100vh;
 }
 
 .wrapper #quote-box {
-    background-color: rgb(39, 174, 96);
-    width: 50%;
-    height: 300px;
-    padding: 20px;
-    margin: 20px;
-    border-radius: 10px;
-    border: 2px solid rgba(255, 255, 255, 0.4);
+  background-color: rgb(39, 174, 96);
+  width: 50%;
+  height: 50%;
+  border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.4);
 }
 
-.wrapper #quote-body{
-    font-size: 20px;
-    font-weight: 600;
-    text-align: center;
-    margin: 20px auto;
-    line-height: 20px;
+.wrapper #quote-body p {
+  padding: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
 }
 
 button {
-    font-size: 20px;
-    font-weight: bold;
-    color: black;
-    padding: 10px;
-    background-color: rgba(255, 255, 10, 0.5);
-    border-radius: 10px;
-    cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+  padding: 14px;
+  background-color: rgba(255, 255, 10, 0.5);
+  border-radius: 10px;
+  cursor: pointer;
 }
 
-.wrapper #quote-footer{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 200px;
+.wrapper #quote-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: row;
+  padding: 20px;
 }
-
-
-

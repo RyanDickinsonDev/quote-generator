@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './index.css';
 import Quotes from './data/quotes';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTwitter } from '@fortawesome/free-brands-svg-icons';
 
 class App extends Component {
   constructor(props) {
@@ -34,7 +36,7 @@ class App extends Component {
             <p id="author">{quote.author}</p>
           </div>
           <div id="quote-footer">
-           <a href="https://twitter.com/intent/tweet" target="_blank" id="tweet-quote" rel="noreferrer">Tweet Quote</a>
+          <a href={`https://twitter.com/intent/tweet?text=${quote.body} - ${quote.author}`} target="_blank" id="tweet-quote" rel="noopener noreferrer"><FontAwesomeIcon icon={faTwitter}/></a>
             <button id="new-quote" onClick={this.handleClick}>
               Generate Quote
             </button>
